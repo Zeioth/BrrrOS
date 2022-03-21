@@ -22,7 +22,7 @@ installer.sh
 
   In the TUI installer, choose what to install
 
-``` bash
+``` text
 1) Software installer   →  Base packages from the official arch repos.
 2) Settings applier     →  You can accept only the ones you want!
 3) AUR installer        →  you can accept only the ones your want!
