@@ -1,9 +1,35 @@
+### Input configuration
+#
+# Example configuration:
+#
+#   input "18003:1:foostan_Corne_Mouse" {
+#       # Flat or adaptative
+#       accel_profile adaptive
+#
+#       # Between -1.0 and 1.0
+#       pointer_accel 1.0
+#    
+#       # Fine grained movement sensivity
+#       calibration_matrix 8 0 0 0 8 0
+#   }
+#
+##############################################################################
+# HINTS:
 # input "*" equals all input methods
-# to specify settings for a specific input method, use its identifier instead.
-# query the connected input methods: `swaymsg -t get_inputs`
+# You can list the available input devices with: `swaymsg -t get_inputs`
+#############################################################################
 
 
 input * {
+    
+    # ---HERE ---------------------------------------------------------
+    # Message for the user: Here you can change your keyboard language.
+    # -----------------------------------------------------------------
+    xkb_layout "en"
+
+    # ---HERE ---------------------------------------------------------
+    # Message for the user: And other settings you probably won't need.
+    # -----------------------------------------------------------------
     # toggles through configured layouts via caps-lock 
     # query the available layout toggles: `localectl list-x11-keymap-options | grep grp:`
     # query the available led indicators: `localectl list-x11-keymap-options | grep grp_led`
@@ -12,20 +38,7 @@ input * {
     xkb_options grp:caps_toggle,grp_led:caps
     
     # query the available layouts: `localectl list-x11-keymap-layouts`
-    xkb_layout "es"
-
     # query the available variants for a given layout: `localectl list-x11-keymap-variants de`
     # list in the same order as the layouts - empty equals the default layout
     xkb_variant ","
-}
-
-input "18003:1:foostan_Corne_Mouse" {
-    # Flat or adaptative
-    accel_profile adaptive
-
-    # Between -1.0 and 1.0
-    pointer_accel 1.0
-
-    #My old xorg values: calibration_matrix 8 0 0 0 5 0 0 0 1
-    calibration_matrix 8 0 0 0 8 0
 }

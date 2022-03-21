@@ -1,3 +1,4 @@
+#!/bin/bash
 systemctl --user restart gamemoded.service
 steam-native
 systemctl --user stop gamemoded.service

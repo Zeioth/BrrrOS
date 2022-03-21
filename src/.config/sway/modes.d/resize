@@ -8,10 +8,10 @@ mode --pango_markup $mode_resize {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    $bindsym y resize grow width 60px
-    $bindsym n resize grow height 60px
-    $bindsym e resize shrink height 60px
-    $bindsym o resize shrink width 60px
+    $bindsym h resize grow width 60px
+    $bindsym l resize grow height 60px
+    $bindsym j resize shrink height 60px
+    $bindsym k resize shrink width 60px
     $bindsym Shift+y resize shrink width 120px
     $bindsym Shift+n resize grow height 120px
     $bindsym Shift+e resize shrink height 120px

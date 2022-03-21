@@ -1,6 +1,7 @@
 # You can discover the app_id of a program with
 # swaymsg -t get_tree | grep app_id
 
+
 # WORKSPACE SETTINGS
 # ===========================================================================
 smart_gaps on
@@ -14,7 +15,8 @@ hide_edge_borders smart
 focus_follows_mouse no
 mouse_warping container
 
-# WORKSPACE ASSIGNATION (LEGACY)
+
+# WORKSPACE ASSIGNATION (LEGACY CODE → REMAINS AS EXAMPLE)
 # ============================================================================
 
 # Open applications on specific workspaces

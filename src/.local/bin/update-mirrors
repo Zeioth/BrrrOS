@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # HOW TO USE:
 # ============================================================================
 # You must add the next line [[[AT THE END]]] of the sudoers file using 'sudo visudo'.

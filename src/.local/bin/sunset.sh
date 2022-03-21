@@ -12,7 +12,7 @@ function start(){
 	latitude=${latitude:-65}
 	location=${location:-"off"}
 
-	if [ "${location}" = "on" ]; 
+	if [ "${location}" = "on" ];
 	then
 		CONTENT=$(curl -s https://freegeoip.app/json/)
 		content_longitude=$(echo $CONTENT | jq '.longitude // empty')
@@ -25,7 +25,7 @@ function start(){
 	fi
 }
 
-#Accepts managing parameter 
+#Accepts managing parameter
 case $1'' in
 	'off')
    	pkill wlsunset
@@ -49,12 +49,12 @@ case $1'' in
     ;;
 esac
 
-#Returns a string for Waybar 
+#Returns a string for Waybar
 if pkill -0 wlsunset
 then
 	class="on"
 else
 	class="off"
-fi	
+fi
 
 printf '{"alt":"%s"}\n' "$class"

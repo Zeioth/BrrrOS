@@ -1,0 +1,71 @@
+# /bin/bash
+# HELP: See 'man mako'
+
+# Features
+# -----------------------------------------------------------------------------
+markup=1
+actions=1
+
+# Format
+# -----------------------------------------------------------------------------
+# Possible variables are:
+#   %a  appname
+#   %s  summary
+#   %b  body
+#   %i  iconname (including its path)
+#   %I  iconname (without its path)
+#   %p  progress value if set ([  0%] to [100%]) or nothing
+# format = "%s %p\n%b"
+format=<span color='#93a1a1'>[%a]</span> <span color='#CCCCCC'>\n%s</span>\n%b
+default-timeout=30000
+
+
+# Style
+# -----------------------------------------------------------------------------
+#font=RobotoMono Nerd Font 32
+font=Fira Code 32
+text-color=#fdf6e3
+#background-color=#002b36AA
+border-color=#002028
+border-size=2
+width=900
+height=300
+icon-path=/usr/share/icons/Papirus-Adapta-Nokto-Maia:/usr/share/icons/Papirus-Maia:/usr/share/icons/Papirus
+
+# Urgency colors/timeout
+# -----------------------------------------------------------------------------
+[urgency=low]
+text-color=#93a1a1
+
+[urgency=low actionable]
+border-color=#93a1a1
+
+[urgency=normal actionable]
+border-color=#268bd2
+
+[urgency=high]
+border-color=#9c2220
+ignore-timeout=1
+
+[urgency=high actionable]
+border-color=#6c71c4
+ignore-timeout=1
+
+# BY APP CONFIG
+# -----------------------------------------------------------------------------
+[app-name=playerctl]
+max-icon-size=96
+
+[app-name=clementine]
+max-icon-size=96
+
+[app-name=i3-hint]
+max-icon-size=48
+format=%s\n%b
+width=150
+
+# Silence spotify notifications
+[app-name=Spotify]
+format=""
+#format = "<b>Now Playing</b>\n%s\n%b"
+#timeout = 3

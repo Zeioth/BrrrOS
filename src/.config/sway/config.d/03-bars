@@ -2,13 +2,14 @@ bar {
     id default
     swaybar_command waybar
 
-    # Right now you have to set this it waybar's config
-    position bottom
+    # For swaybar you have to set this in  ~/.config/waybar/config.jsonc
+    # position bottom
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
+    # What you define here, you can use it in ~/.config/waybar/style.css
     colors {
         statusline #ffffff
         background #323232

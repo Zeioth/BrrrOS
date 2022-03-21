@@ -1,4 +1,3 @@
-
 # SYSTEM
 # ============================================================================
 # Definitions files: 
@@ -44,8 +43,8 @@ $bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
 # FOCUS
 # ============================================================================
 
-# Move your focus around
 ## Navigation // Move focus // $mod + ↑ ↓ ← → ##
+## Uncomment to enable
 # $bindsym $mod+Left focus left
 # $bindsym $mod+Down focus down
 # $bindsym $mod+Up focus up
