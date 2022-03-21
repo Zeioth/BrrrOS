@@ -45,6 +45,6 @@ https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8
 * Better videos showing the material are needed. We need to find a service that converts video to hi-res gif, as stupid GitHub only allow 10mb video.
 * Modes currently use workman layout → Users probably prefer qwerty.
 * Background not included → yet
-* By default, still uses a few of my personal settings (6 screens and stuff) → Make it user agnostic
+* ~~By default, still uses a few of my personal settings (6 screens and stuff) → Make it user agnostic~~
 
 Please report any bug you find and I will look into them.
