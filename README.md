@@ -38,7 +38,7 @@ https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8
 * Easy to customize desktop widgets.
 * Tokyonight theme.
 * Custom sway modes.
-* Beautiful base to custom.
+* Beautiful base to customize.
 
 ## KOWN BUGS
 
