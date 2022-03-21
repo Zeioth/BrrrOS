@@ -1,0 +1,320 @@
+// =============================================================================
+// Waybar configuration
+// # DOCS: https://github.com/Alexays/Waybar/wiki/Configuration
+// # HINT: Anything you run into a swaymsg exec "" block will accept aliases.
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+    // If height property would be not present, it'd be calculated dynamically
+    //"height": 30,
+    "position": "bottom",
+
+    "modules-left": [
+        "custom/menu",
+        "sway/workspaces"
+        //"custom/scratchpad"
+    ],
+    "modules-center": [
+        "custom/wf-recorder",
+        "sway/mode"
+    ],
+    "modules-right": [
+        // informational
+        // "sway/language",
+        "custom/github",
+        "custom/khal",
+        //"custom/zeit",
+        "custom/clipboard",
+        "cpu",
+        "memory",
+        "battery",
+        "temperature",
+        "disk",
+        // connecting
+        //"network",
+        // media
+        //"idle_inhibitor",
+        "custom/playerctl",
+        "pulseaudio",
+        "backlight",
+        // system
+        "bluetooth",
+        "custom/weather",
+        "custom/sunset",
+        "custom/pacman",
+        "tray",
+        "clock"
+    ],
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-charging": " {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["","","","","",""],
+        "tooltip": true,
+        "bat": "BAT0"
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%e %b %Y %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
+        "on-click": "swaymsg 'exec $khal'"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "﬙ {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "swaymsg exec '$sys_monitor'"
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": " {percentage}%  {swapPercentage}%",
+        "tooltip-format": "  {used:.1f}Gb / {total:.1f}Gb\n {swapUsed:.1f}Gb / {swapTotal:.1f}Gb",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "swaymsg exec '$sys_monitor'"
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": " ",
+        "format-ethernet": "",
+        "format-disconnected": "睊",
+        "tooltip-format": "{ifname} ({essid}): {ipaddr}",
+        "on-click": "swaymsg exec '$network_manager'"
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>",
+        "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "零",
+            "deactivated": "鈴"
+        }
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "on-scroll-up": "light -A 1",
+        "on-scroll-down": "light -U 1"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%{format_source}",
+        "format-muted": "婢 {format_source}",
+        "format-source": "",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": ["奄", "奔", "墳"]
+        },
+        "tooltip-format": "{icon} {volume}% {format_source}",
+        "on-click": "swaymsg exec '$pulsemixer'",
+        "on-click-middle": "swaymsg exec '$audio_mute_toggle'"
+    },
+
+    "temperature": {
+      "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+      "critical-threshold": 90,
+      "interval": 5,
+      "format": "{icon} {temperatureC}°C",
+      "format-icons": ["","",""],
+      "tooltip": true,
+      "on-click": "swaymsg exec '$sensors'"
+    },
+
+    "tray": {
+        "icon-size": 42,
+        "spacing": 15
+    },
+
+    "custom/weather": {
+      "icon-size": 34,
+      "format": "{}",
+      "tooltip": true,
+      "on-click": "swaymsg exec '$weather'",
+      "interval": 3600,
+      "exec": "~/.local/bin/waybar-wttr.py",
+      "return-type": "json"
+    },
+
+    "custom/pacman": {
+        "format": " {}",
+        "interval": 14400,
+        "exec-if": "[ $(pamac checkupdates --no-aur -q | wc -l) -gt 0 ]",
+        "exec": "pamac checkupdates --no-aur -q | wc -l",
+        "on-click": "swaymsg exec '$pamac_waybar'",
+        "signal": 4
+    },
+
+    "custom/menu": {
+        //"format": "",
+        "format": "🐸",
+        "on-click": "swaymsg exec '$launcher'",
+        "tooltip": false
+    },
+
+    "bluetooth": {
+        "format": "{icon}",
+        "interval": 30,
+        "format-icons": {
+            "enabled": "",
+            "disabled": ""
+        },
+        "on-click": "exec blueberry",
+        "tooltip-format": "{}"
+    },
+
+    "disk": {
+        "interval": 3,
+        "format": " {percentage_free}%",
+        "tooltip-format": " {free} / {total}",
+        "path": "/",
+        "on-click": "exec baobab",
+        "states": {
+          "warning": 70,
+          "critical": 95
+      	}
+    },
+
+    "sway/language": {
+        "format": " {}",
+        "min-length": 5,
+        "tooltip": false,
+        "on-click": "swaymsg '$select_next_keyboard_layout'"
+    },
+    
+    "custom/scratchpad": {
+        "interval": "once",
+        "return-type": "json",
+        "format" : "{icon}",
+        "format-icons": {
+            "one": "类",
+            "many": "缾"
+        },
+        "exec": "/bin/sh $HOME/.local/bin/scratchpad.sh",
+        "on-click": "swaymsg 'scratchpad show'",
+        "signal": 7
+    },
+    
+    "custom/sunset": {
+        "interval": "once",
+        "tooltip": false,
+        "return-type": "json",
+        "format" : "{icon}",
+        "format-icons": {
+            "on": "" ,
+            "off": "" 
+        },
+        "exec": "~/.local/bin/sunset.sh",
+        "on-click": "swaymsg exec '$sunset_toggle'",
+        "exec-if": "~/.local/bin/sunset.sh check",
+        "signal": 6
+    },
+
+    "custom/wf-recorder": {
+        "interval": "once",
+        "return-type": "json",
+        "format" : "{}",
+        "tooltip-format": "{tooltip}",
+        "exec": "swaymsg '$desktop_record_visual_feedback'",
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "swaymsg exec '$desktop_record_toggle'",
+        "signal": 8
+	},
+
+    "custom/github": {
+        "interval": 300,
+        "tooltip": false,
+        "return-type": "json",
+        "format" : " {}",
+        "exec": "gh api '/notifications' -q '{ text: length }' | cat -", // → No va a funcionar porque el alias gh lo tenemos cogido.
+        "exec-if": "command -v gh >/dev/null && gh auth status 2>&1 | grep -q -m 1 'Logged in' && gh api '/notifications' -q 'length' | grep -q -m 1 '0' ; test $? -eq 1",
+        "on-click": "swaymsg exec '$github_open_notifications_browser'",
+        "signal": 4
+    },
+
+    "custom/khal": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 300,
+        "on-click": "swaymsg 'exec $khal'",
+        "format-icons": {
+        "default": ""
+        },
+        "exec": "~/.local/bin/waybar-khal.py",
+        "return-type": "json"
+    },
+
+    "custom/zeit": {
+        "return-type": "json",
+        "interval": "once",
+        "format": "{icon}",
+        "format-icons": {
+            "tracking": "華",
+            "stopped": ""
+        },
+        "exec": "~/.local/bin/zeit.sh status",
+        "on-click": "swaymsg exec 'zeit-waybar-wrapper click'",
+        "on-click-right": "swaymsg exec 'zeit-stats'",
+        "exec-if": "[ -x \"$(command -v zeit)\" ]",
+        "signal": 10
+    },
+
+    "custom/clipboard": {
+        "format": "",
+        "interval": "once",
+        "return-type": "json",
+        "on-click": "swaymsg -q exec '$clipboard_open'",
+        "on-click-middle": "swaymsg exec '$clipboard_clear'",
+        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(mid click to clear)'",
+        "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
+        "signal": 9
+    },
+
+    "custom/playerctl": {
+        "interval": "once",
+        "tooltip": true,
+        "return-type": "json",
+        "format" : "{icon}",
+        "format-icons": {
+            "Playing": "奈",
+            "Paused": ""
+        },
+        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
+        "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
+        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
+        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
+        "signal": 5
+    }
+}
