@@ -70,19 +70,17 @@
 #workspaces button.urgent	src/.config/waybar/style.css	/^#workspaces button.urgent {$/;"	c
 *	src/.config/waybar/style.css	/^* {$/;"	s
 ARGUMENTS	src/.config/sway/.unused-scripts/autoname-workspaces.py	/^    ARGUMENTS = args$/;"	v
-Ah!	README.md	/^## Ah!$/;"	s	chapter:BrrrOS
 BrrrOS	README.md	/^# BrrrOS$/;"	c
 CAT PHOTOS EVERYONE LIKE CAT PHOTOS	README.md	/^## CAT PHOTOS EVERYONE LIKE CAT PHOTOS$/;"	s	chapter:BrrrOS
-Cool features packed	README.md	/^## Cool features packed$/;"	s	chapter:BrrrOS
 DEFAULT_ICON	src/.config/sway/.unused-scripts/autoname-workspaces.py	/^DEFAULT_ICON = "󰀏"$/;"	v
 DOWNLOAD	README.md	/^## DOWNLOAD$/;"	s	chapter:BrrrOS
 DocsConfig	src/.config/sway/.unused-scripts/sbdp.py	/^class DocsConfig:$/;"	c
+FEATURES PACKED	README.md	/^## FEATURES PACKED$/;"	s	chapter:BrrrOS
 HOW TO INSTALL	README.md	/^## HOW TO INSTALL$/;"	s	chapter:BrrrOS
-How di use?	README.md	/^## How di use?$/;"	s	chapter:BrrrOS
 KOWN BUGS	README.md	/^## KOWN BUGS$/;"	s	chapter:BrrrOS
 WINDOW_ICONS	src/.config/sway/.unused-scripts/autoname-workspaces.py	/^WINDOW_ICONS = {$/;"	v
 Who is this OS for	README.md	/^## Who is this OS for$/;"	s	chapter:BrrrOS
-Why did you did this?	README.md	/^## Why did you did this?$/;"	s	chapter:BrrrOS
+Why did you do this?	README.md	/^## Why did you do this?$/;"	s	chapter:BrrrOS
 args	src/.config/sway/.unused-scripts/autoname-workspaces.py	/^    args = parser.parse_args()$/;"	v
 args	src/.config/sway/.unused-scripts/inactive-windows-transparency.py	/^    args = parser.parse_args()$/;"	v
 check	src/.config/sway/.unused-scripts/grimshot	/^check() {$/;"	f

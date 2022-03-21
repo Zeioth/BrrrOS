@@ -1,14 +1,8 @@
 # BrrrOS
 The OS that goes like brrr
 
-## How di use?
-U like, install arch, and run the installer, and, and, that's all.
-
-## Why did you did this?
-I don't know I just did.
-
-## Ah!
-Ah
+## Why did you do this?
+[I don't know I just did](https://i.redd.it/ho2zlmfkn2b01.png).
 
 ## Who is this OS for
 
@@ -21,31 +15,38 @@ Ah
 
 * Download a release from github or clone with
 
+    ```
     git clone git@github.com:Zeioth/BrrrOS.git
+    ```
 
 ## HOW TO INSTALL
 
 Run archinstall to install arch, choose sway, and then just
 
-  git clone git@github.com:Zeioth/BrrrOS.git && cd BrrrOS &&  /
-  installer.sh
+``` bash
+git clone git@github.com:Zeioth/BrrrOS.git && cd BrrrOS &&  /
+installer.sh
+```
 
-In the TUI installer, choose want to install
+  In the TUI installer, choose want to install
 
-  1) Software installer   →  Base packages from the official arch repos.
-  2) Settings applier     →  You can accept only the ones you want!
-  3) AUR installer        →  you can accept only the ones your want!
-
+``` bash
+1) Software installer   →  Base packages from the official arch repos.
+2) Settings applier     →  You can accept only the ones you want!
+3) AUR installer        →  you can accept only the ones your want!
+```
 ## CAT PHOTOS EVERYONE LIKE CAT PHOTOS
 
 Flashy David Hasselhoff images
 
-## Cool features packed
+## FEATURES PACKED
 
-* Easy to customize sway settings [tidy, follow standard conventions].
-* Easy to customize desktop widget using nwg-wrapper
+* Easy to customize sway settings [tidy, follow conventions].
+* Easy to customize desktop widget using nwg-wrapper.
 * Everything packed has the tokyonight theme applied.
   [Similar to nord, but doesn't look bleached on LCD displays].
+* Custom keyboard modes [screenshot, resolution-change, tile-movement]
+* HiDPI is a first class citzen here.
 * Like Manjaro-Sway, but it works.
 
 ## KOWN BUGS

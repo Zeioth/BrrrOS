@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# HOW TO USE: Change >my-github.key> for your actual key.
+echo "EDIT ~/.local/bin/github-keychain-enable if you never did yet"
+
+eval `keychain --eval ~/.ssh/<my-github.key>`
+echo "🟢 KEYS ADDED TO THE KEYCHAIN UNTIL MANUALLY DISABLED, OR SYSTEM LOGOUT."
+echo "*  Remember to use 'github-keychain-off' when you finish."
+zsh -i

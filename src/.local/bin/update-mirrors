@@ -1,0 +1,9 @@
+# HOW TO USE:
+# ============================================================================
+# You must add the next line [[[AT THE END]]] of the sudoers file using 'sudo visudo'.
+# Otherwise it won't work.
+# ===========================================================================
+# zeioth ALL=(ALL:ALL) NOPASSWD: /home/zeioth/.local/bin/update-mirrors
+# after that you can run it as 'sudo update-mirrors'
+# SECURITY: make sure this file has only execution permissions
+sudo reflector -n 16 --save /etc/pacman.d/mirrorlist && sudo pacman -Syy 

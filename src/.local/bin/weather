@@ -1,0 +1,2 @@
+echo
+curl -s https://v2.wttr.in/malaga | sed '44d' | sed '43d' | sed '40d' | sed '37d' | sed '36d' | sed '35d' | sed '34d' | sed '2d' | sed '37d' && read -n 1

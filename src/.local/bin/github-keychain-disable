@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+pkill -9 ssh-agent
+echo "🟢 Keychain disabled successfuly."
+echo "Type 'exit' to go back to your terminal session."
+

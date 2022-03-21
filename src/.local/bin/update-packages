@@ -1,0 +1,27 @@
+#!/bin/bash
+# This program updates the system packages using paru
+
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[1;33m"
+NC="\033[0m" # No Color
+
+echo ''
+echo -e $GREEN'UPDATING PACKAGES'$NC
+echo -e $GREEN'======================================='$NC
+paru -Syu --redownload
+echo ''
+echo -e $GREEN"================================================================="
+echo -e "UPDATE COMPLETED!\n"$NC
+
+read -p "DO YOU WANT TO UPDATE DANGEROUS PACKAGES TOO? 
+RECOMMENDED EVERY 3 MONTHS (y/N): " -i "y" USER_AGREEMENT
+if [ "$USER_AGREEMENT" == "y" ]; then
+  # Install packages bypassing IgnorePgk
+  sed '/^IgnorePkg/d' /etc/pacman.conf > /tmp/432143214 && \
+    paru -Syu --redownload --config /tmp/432143214; rm /tmp/432143214
+fi
+
+echo -e $GREEN"\nUPDATE COMPLETED!"$NC
+read
+
