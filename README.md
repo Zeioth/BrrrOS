@@ -20,7 +20,7 @@ git clone git@github.com:Zeioth/BrrrOS.git && cd BrrrOS &&  /
 installer.sh
 ```
 
-  In the TUI installer, choose want to install
+  In the TUI installer, choose what to install
 
 ``` bash
 1) Software installer   →  Base packages from the official arch repos.
