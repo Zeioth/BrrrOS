@@ -47,4 +47,4 @@ https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8
 * Background not included → yet
 * By default, still uses a few of my personal settings (6 screens and stuff) → Make it user agnostic
 
-Please report any bug you find and I will look into tehm.
+Please report any bug you find and I will look into them.
