@@ -4,7 +4,7 @@ The OS that goes like brrr
 ## Why did you do this?
 [I just did](https://i.redd.it/ho2zlmfkn2b01.png)
 
-## Who is this OS for
+## Who is this for
 
 * Experienced Arch/Manjaro users who want to get ideas for their own system.
 * People who want to have all the important system configs on ~/.config to avoid
