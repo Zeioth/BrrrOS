@@ -2,7 +2,7 @@
 The OS that goes like brrr
 
 ## Why did you do this?
-[I don't know I just did](https://i.redd.it/ho2zlmfkn2b01.png).
+[I just did](https://i.redd.it/ho2zlmfkn2b01.png)
 
 ## Who is this OS for
 
@@ -11,15 +11,7 @@ The OS that goes like brrr
   breakage on updates.
 * People too fucking lazy to write their own installer. → Yes I'm looking at you
 
-## DOWNLOAD
-
-* Download a release from github or clone with
-
-    ```
-    git clone git@github.com:Zeioth/BrrrOS.git
-    ```
-
-## HOW TO INSTALL
+## INSTALLATION
 
 Run archinstall to install arch, choose sway, and then just
 
@@ -37,24 +29,20 @@ installer.sh
 ```
 ## CAT PHOTOS EVERYONE LIKE CAT PHOTOS
 
-Flashy David Hasselhoff images
+https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8b6e-0a49e8683977.mp4
 
-## FEATURES PACKED
+## FEATURES
 
 * Easy to customize sway settings [tidy, follow conventions].
-* Easy to customize desktop widget using nwg-wrapper.
-* Everything packed has the tokyonight theme applied.
-  [Similar to nord, but doesn't look bleached on LCD displays].
-* Custom keyboard modes [screenshot, resolution-change, tile-movement]
-* HiDPI is a first class citzen here.
-* Like Manjaro-Sway, but it works.
+* Easy to customize desktop widgets.
+* Tokyonight theme.
+* Custom sway modes.
 
 ## KOWN BUGS
 
 * THE CAT PHOTOS SECTION DON'T DISLPAY CAT PHOTOS → Max priority
-* Modes currently use weird keys (workman layour) → Users probably prefer qwerty.
-* We must include the background.
+* Modes currently use workman layout → Users probably prefer qwerty.
+* Background not included → yet
 * By default, still uses a few of my personal settings (6 screens and stuff) → Make it user agnostic
 
-It should be quite well polished.
-Please report any bug you find and I promise I will look into it.
+Please report any bug you find and I will look into tehm.
