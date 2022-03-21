@@ -33,10 +33,12 @@ https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8
 
 ## FEATURES
 
+* Pure arch Linux.
 * Easy to customize sway settings [tidy, follow conventions].
 * Easy to customize desktop widgets.
 * Tokyonight theme.
 * Custom sway modes.
+* Beautiful base to custom.
 
 ## KOWN BUGS
 
