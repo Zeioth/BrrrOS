@@ -27,7 +27,7 @@ installer.sh
 2) Settings applier     →  You can accept only the ones you want!
 3) AUR installer        →  you can accept only the ones your want!
 ```
-## CAT PHOTOS EVERYONE LIKE CAT PHOTOS
+## PREVIEW
 
 https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8b6e-0a49e8683977.mp4
 
@@ -42,7 +42,7 @@ https://user-images.githubusercontent.com/3357792/159310721-6eada21d-924a-4434-8
 
 ## KOWN BUGS
 
-* THE CAT PHOTOS SECTION DON'T DISLPAY CAT PHOTOS → Max priority
+* Better videos showing the material are needed. We need to find a service that converts video to hi-res gif, as stupid twitter only allow 10mb video.
 * Modes currently use workman layout → Users probably prefer qwerty.
 * Background not included → yet
 * By default, still uses a few of my personal settings (6 screens and stuff) → Make it user agnostic
